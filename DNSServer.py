@@ -76,6 +76,24 @@ dns_records = {
         ),
     },
 
+    'safebank.com.': {
+        dns.rdatatype.A: '203.0.113.5',
+        dns.rdatatype.AAAA: '2606:4700:4700::1111',
+        dns.rdatatype.MX: [(10, 'mail.safebank.com.')],  # List of (preference, mail server) tuples
+        dns.rdatatype.CNAME: 'www.example.com.',
+        dns.rdatatype.NS: 'ns1.safebank.com.',
+        dns.rdatatype.TXT: ('SafeBank',),
+        dns.rdatatype.SOA: (
+            'ns1.safebank.com.', #mname
+            'admin.safebank.com.', #rname
+            2023081401, #serial
+            3600, #refresh
+            1800, #retry
+            604800, #expire
+            86400, #minimum
+        ),
+    },
+    # Add more records as needed (see assignment instructions!
 }
 
 def run_dns_server():
