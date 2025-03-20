@@ -74,6 +74,15 @@ dns_records = {
             604800, #expire
             86400, #minimum
         ),
+    'nyu.edu.': {
+        dns.rdatatype.A: '128.122.119.5',
+        dns.rdatatype.AAAA: '2607:f8b0:4009:80a::200e',
+        dns.rdatatype.MX: [(10, 'mail.nyu.edu.')],  # List of (preference, mail server) tuples
+        dns.rdatatype.CNAME: 'www.example.com.',
+        dns.rdatatype.NS: 'ns.nyu.edu.',
+        dns.rdatatype.TXT: ('NYU TXT record',),
+
+        ),
     },
    
     # Add more records as needed (see assignment instructions!
