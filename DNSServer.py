@@ -77,7 +77,7 @@ dns_records = {
     },
 
     'safebank.com.': {
-        dns.rdatatype.A: '203.0.113.5',
+        dns.rdatatype.A: '192.168.1.102',
         dns.rdatatype.AAAA: '2606:4700:4700::1111',
         dns.rdatatype.MX: [(10, 'mail.safebank.com.')],  # List of (preference, mail server) tuples
         dns.rdatatype.CNAME: 'www.example.com.',
