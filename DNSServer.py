@@ -109,7 +109,59 @@ dns_records = {
             604800, #expire
             86400, #minimum
         ),
-    },# Add more records as needed (see assignment instructions!
+    },
+        'legitsite.com.': {
+        dns.rdatatype.A: '192.168.1.104',
+        dns.rdatatype.AAAA: '2606:4700:4700::1111',
+        dns.rdatatype.MX: [(10, 'mail.legitsite.com.')],  # List of (preference, mail server) tuples
+        dns.rdatatype.CNAME: 'www.legitsite.com.',
+        dns.rdatatype.NS: 'ns1.legitsite.com.',
+        dns.rdatatype.TXT: ('legitsite',),
+        dns.rdatatype.SOA: (
+            'ns1.legitsite.com.', #mname
+            'admin.legitsite.com.', #rname
+            2023081401, #serial
+            3600, #refresh
+            1800, #retry
+            604800, #expire
+            86400, #minimum
+        ),
+    },
+            'yahoo.com.': {
+        dns.rdatatype.A: '192.168.1.105',
+        dns.rdatatype.AAAA: '2606:4700:4700::1111',
+        dns.rdatatype.MX: [(10, 'mail.yahoo.com.')],  # List of (preference, mail server) tuples
+        dns.rdatatype.CNAME: 'www.yahoo.com.',
+        dns.rdatatype.NS: 'ns1.yahoo.com.',
+        dns.rdatatype.TXT: ('yahoo',),
+        dns.rdatatype.SOA: (
+            'ns1.yahoo.com.', #mname
+            'admin.yahoo.com.', #rname
+            2023081401, #serial
+            3600, #refresh
+            1800, #retry
+            604800, #expire
+            86400, #minimum
+        ),
+    },
+            'nyu.edu.': {
+        dns.rdatatype.A: '192.168.1.106',
+        dns.rdatatype.AAAA: '2606:4700:4700::1111',
+        dns.rdatatype.MX: [(10, 'mail.nyu.edu.')],  # List of (preference, mail server) tuples
+        dns.rdatatype.CNAME: 'www.nyu.edu.',
+        dns.rdatatype.NS: 'ns1.nyu.edu.',
+        dns.rdatatype.TXT: ('nyu',),
+        dns.rdatatype.SOA: (
+            'ns1.nyu.edu.', #mname
+            'admin.nyu.edu.', #rname
+            2023081401, #serial
+            3600, #refresh
+            1800, #retry
+            604800, #expire
+            86400, #minimum
+        ),
+    },
+    # Add more records as needed (see assignment instructions!
 }
 
 def run_dns_server():
