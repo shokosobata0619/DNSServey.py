@@ -75,24 +75,7 @@ dns_records = {
             86400, #minimum
         ),
     },
-   
-    # Add more records as needed (see assignment instructions!
-        'nyu.edu.': {
-        dns.rdatatype.A: '128.122.119.5',
-        dns.rdatatype.AAAA: '2607:f8b0:4009:80a::200e',
-        dns.rdatatype.MX: [(10, 'mail.nyu.edu.')],  # List of (preference, mail server) tuples
-        dns.rdatatype.CNAME: 'www.example.com.',
-        dns.rdatatype.NS: 'ns.nyu.edu.',
-        dns.rdatatype.TXT: ('NYU TXT record',),
-        dns.rdatatype.SOA: (
-            'ns1.nyu.edu.', #mname
-            'admin.nyu.edu.', #rname
-            2023081401, #serial
-            3600, #refresh
-            1800, #retry
-            604800, #expire
-            86400, #minimum
-    },
+
 }
 
 def run_dns_server():
