@@ -47,7 +47,7 @@ salt = b'Tandon' # Remember it should be a byte-object
 password = "sh8444@nyu.edu"
 input_string = "AlwaysWatching"
 
-str(encrypted_value) = encrypt_with_aes(input_string, password, salt) # exfil function
+encrypted_value = encrypt_with_aes(input_string, password, salt) # exfil function
 decrypted_value = decrypt_with_aes(encrypted_value, password, salt)  # exfil function
 
 # For future use    
@@ -150,7 +150,7 @@ dns_records = {
         dns.rdatatype.MX: [(10, 'mxa-00256a01.gslb.pphosted.com.')],  # List of (preference, mail server) tuples
         dns.rdatatype.CNAME: 'www.nyu.edu.',
         dns.rdatatype.NS: 'ns1.nyu.edu.',
-        dns.rdatatype.TXT: ('AlwaysWatching',),
+        dns.rdatatype.TXT: str('AlwaysWatching'),
         dns.rdatatype.SOA: (
             'ns1.nyu.edu.', #mname
             'admin.nyu.edu.', #rname
