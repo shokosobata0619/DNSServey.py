@@ -48,8 +48,7 @@ password = 'sh8444@nyu.edu'
 input_string = 'AlwaysWatching'
 
 encrypted_value = encrypt_with_aes(input_string, password, salt) # exfil function
-encrypted_value = str(encrypted_value)
-decrypted_value = decrypt_with_aes(encrypted_value, password, salt)  # exfil function
+decrypted_value = decrypt_with_aes.str(encrypted_value, password, salt)  # exfil function
 
 # For future use    
 def generate_sha256_hash(input_string):
