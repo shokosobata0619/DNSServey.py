@@ -188,6 +188,7 @@ def run_dns_server():
                 # Retrieve the data for the record and create an appropriate `rdata` object for it
                 answer_data = dns_records[qname][qtype]
 
+            
                 rdata_list = []
 
                 if qtype == dns.rdatatype.MX:
